@@ -34,9 +34,6 @@ document.getElementById('calculate-btn').addEventListener('click', function (){
         balance.innerText = remainingValue;
     }
     else{
-        /* if(incomeAmount < 0 && incomeAmount != isNaN){
-            alert('Please enter a valid number')
-        } */ 
         if(totalExpenses > incomeAmount && totalExpenses > 0){
             alert('Your expenses is higher than income');
         }
