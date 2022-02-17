@@ -15,48 +15,50 @@
         <h2 class="text-5xl text-center my-10 font-semibold text-cyan-900">Monthly Expence Calculator</h2>
     </header>
     <main>
-        <section class="grid grid-cols-2 gap-6 container mx-auto">
-            <div>
-                <img src="images/monthly-payment.jpg" alt="">
-            </div>
-            <div class="bg-[#F8F8F8]">
+        <section class="container mx-auto">
+            <div class="md:grid md:grid-cols-2 gap-6 mx-auto lg-flex">
                 <div>
-                    <h3 class="text-2xl text-center my-10">Income</h3>
-                    <div class="mx-auto grid place-content-center">
-                        <div class="container mx-auto inline-flex">
-                            <h4 class="mr-4">Income: </h4>
-                            <input id="income-input" class="mb-4 px-2 bg-[#DCDCDC] rounded" type="text">
-                        </div>
-                    </div>
+                    <img src="images/monthly-payment.jpg" alt="">
                 </div>
-                <div>
-                    <h3 class="text-2xl text-center my-10">Expenses</h3>
-                    <div class="mx-auto grid place-content-center">
-                        <div class="container mx-auto inline-flex">
-                            <h4 class="mr-4">Food: </h4>
-                            <input id="food-expense" class="mb-4 px-2 bg-[#DCDCDC] rounded" type="text">
+                <div class="bg-[#F8F8F8]">
+                    <div>
+                        <h3 class="text-2xl text-center my-6">Income</h3>
+                        <div class="mx-auto grid place-content-center">
+                            <div class="container mx-auto inline-flex">
+                                <h4 class="mr-4">Income: </h4>
+                                <input id="income-input" class="w-3/4 mb-4 px-2 bg-[#DCDCDC] rounded" type="text">
+                            </div>
                         </div>
                     </div>
-                    <div class="mx-auto grid place-content-center">
-                        <div class="container mx-auto inline-flex">
-                            <h4 class="mr-4">Rent: </h4>
-                            <input id="rent-expense" class="mb-4 px-2 bg-[#DCDCDC] rounded" type="text">
+                    <div>
+                        <h3 class="text-2xl text-center my-5">Expenses</h3>
+                        <div class="mx-auto grid place-content-center">
+                            <div class="container mx-auto inline-flex">
+                                <h4 class="mr-4">Food: </h4>
+                                <input id="food-expense" class="my-2 px-2 bg-[#DCDCDC] rounded" type="text">
+                            </div>
+                        </div>
+                        <div class="mx-auto grid place-content-center">
+                            <div class="container mx-auto inline-flex">
+                                <h4 class="mr-4">Rent: </h4>
+                                <input id="rent-expense" class="my-2 px-2 bg-[#DCDCDC] rounded" type="text">
+                            </div>
+                        </div>
+                        <div class="mx-auto grid place-content-center">
+                            <div class="container mx-auto inline-flex">
+                                <h4 class="mr-4">Clothes: </h4>
+                                <input id="clothes-expense" class="my-2 px-2 bg-[#DCDCDC] rounded" type="text">
+                            </div>
                         </div>
                     </div>
-                    <div class="mx-auto grid place-content-center">
-                        <div class="container mx-auto inline-flex">
-                            <h4 class="mr-4">Clothes: </h4>
-                            <input id="clothes-expense" class="mb-4 px-2 bg-[#DCDCDC] rounded" type="text">
-                        </div>
+                    <button id="calculate-btn" class="mx-auto my-5 px-4 py-2 bg-[#59A5FF] rounded text-white font-medium grid place-content-center rounded" >Calculate</button>
+                    <h4 class="text-center my-2">Total Expenses: <span id="total-expenses"></span></h4>
+                    <h4 class="text-center my-2">Balance: <span id="balance"></span></h4>
+                    <div class="text-center">
+                        <p class="my-2"> <span>Save:</span> <input id="save-input" class="px-2 bg-[#DCDCDC] rounded" type="text"> % <button id="save-btn" class="mx-auto px-2 bg-[#59A5FF] text-white font-medium rounded">Save</button></p>
+                        <p class="my-2">Saving Amount: <span id="saving-amount"></span></p>
+                        <p class="my-2">Remaining Balance: <span id="ramaining-balance"></span></p>
                     </div>
-                </div>
-                <button id="calculate-btn" class="mx-auto px-4 py-2 bg-[#59A5FF] rounded text-white font-medium grid place-content-center rounded" >Calculate</button>
-                <h4 class="grid place-content-center">Total Expenses: <span id="total-expenses"></span></h4>
-                <h4 class="grid place-content-center">Balance: <span id="balance"></span></h4>
-                <div class="grid place-content-center">
-                    <p> <span>Save:</span> <input id="save-input" class="mb-4 px-2 bg-[#DCDCDC] rounded" type="text"> % <button id="save-btn" class="mx-auto px-2 bg-[#59A5FF] text-white font-medium rounded">Save</button></p>
-                    <p>Saving Amount: <span id="saving-amount"></span></p>
-                    <p>Remaining Balance: <span id="ramaining-balance"></span></p>
                 </div>
             </div>
         </section>
