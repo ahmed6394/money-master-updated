@@ -4,11 +4,8 @@ function getInputValue(inputId){
     const amount = parseFloat(inputText); 
     return amount;
 }
-
 //subtract function
-
-function calcExpenses(){
-    
+function calcExpenses(){  
     const foodExpense = getInputValue('food-expense'); 
     const rentExpense = getInputValue('rent-expense'); 
     const clothesExpense = getInputValue('clothes-expense');
@@ -18,34 +15,33 @@ function calcExpenses(){
     } 
     else{
         alert('Please eneter a valid number');
-    }
-    
+    } 
 }
-
 function remaining(){
     const incomeAmount = getInputValue('income-input');  
     const remainingValue = incomeAmount - calcExpenses();
     return remainingValue;
 }
-
-document.getElementById('calculate-btn').addEventListener('click', function (){
-    
+document.getElementById('calculate-btn').addEventListener('click', function (){   
     const expensesAmount = document.getElementById('total-expenses');
     const totalExpenses = calcExpenses()
     expensesAmount.innerText = totalExpenses;
     //balance calculation
     const incomeAmount = getInputValue('income-input');  
     const balance = document.getElementById('balance');
-    if(incomeAmount > 0 && incomeAmount != isNaN && incomeAmount > totalExpenses){
+    if(incomeAmount > 0 && incomeAmount != isNaN && incomeAmount >= totalExpenses){
         const remainingValue = remaining(incomeAmount, totalExpenses);
-        balance.innerText = remainingValue
+        balance.innerText = remainingValue;
     }
     else{
-        if(incomeAmount < 0 && incomeAmount != isNaN){
+        /* if(incomeAmount < 0 && incomeAmount != isNaN){
             alert('Please enter a valid number')
+        } */ 
+        if(totalExpenses > incomeAmount && totalExpenses > 0){
+            alert('Your expenses is higher than income');
         }
         else{
-            alert('Your expenses is higher than income')
+            alert('Please enter a valid number');
         }
     }
 })
@@ -66,11 +62,9 @@ document.getElementById('save-btn').addEventListener('click', function (){
         else{
         alert('your savings amount can not exceed your balance');
         }
-        }
+    }
     else{
         alert('Please enter a valid number')
     }
-    
-    
 })
 
