@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documents</title>
+    <title>Document</title>
     <!-- Tailwind script  -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom CSS -->
@@ -19,13 +19,13 @@
             <div>
                 <img src="images/monthly-payment.jpg" alt="">
             </div>
-            <div class="bg-slate-200">
+            <div class="bg-[#F8F8F8]">
                 <div>
                     <h3 class="text-2xl text-center my-10">Income</h3>
                     <div class="mx-auto grid place-content-center">
                         <div class="container mx-auto inline-flex">
                             <h4 class="mr-4">Income: </h4>
-                            <input id="" class="mb-4 px-2 block border border-gray-400" type="text">
+                            <input id="income-input" class="mb-4 px-2 bg-[#DCDCDC] rounded" type="text">
                         </div>
                     </div>
                 </div>
@@ -34,25 +34,30 @@
                     <div class="mx-auto grid place-content-center">
                         <div class="container mx-auto inline-flex">
                             <h4 class="mr-4">Food: </h4>
-                            <input id="" class="mb-4 px-2 block border border-gray-400" type="text">
+                            <input id="food-expense" class="mb-4 px-2 bg-[#DCDCDC] rounded" type="text">
                         </div>
                     </div>
                     <div class="mx-auto grid place-content-center">
                         <div class="container mx-auto inline-flex">
                             <h4 class="mr-4">Rent: </h4>
-                            <input id="" class="mb-4 px-2 block border border-gray-400" type="text">
+                            <input id="rent-expense" class="mb-4 px-2 bg-[#DCDCDC] rounded" type="text">
                         </div>
                     </div>
                     <div class="mx-auto grid place-content-center">
                         <div class="container mx-auto inline-flex">
                             <h4 class="mr-4">Clothes: </h4>
-                            <input id="" class="mb-4 px-2 block border border-gray-400" type="text">
+                            <input id="clothes-expense" class="mb-4 px-2 bg-[#DCDCDC] rounded" type="text">
                         </div>
                     </div>
                 </div>
-                <button id="" class="mx-auto px-4 py-2 bg-[#59A5FF] rounded text-white font-medium grid place-content-center" >Calculate</button>
-                <h4 class="grid place-content-center">Total Expenses: 500</h4>
-                <h4 class="grid place-content-center">Balance: 4500</h4>
+                <button id="calculate-btn" class="mx-auto px-4 py-2 bg-[#59A5FF] rounded text-white font-medium grid place-content-center rounded" >Calculate</button>
+                <h4 class="grid place-content-center">Total Expenses: <span id="total-expenses"></span></h4>
+                <h4 class="grid place-content-center">Balance: <span id="balance"></span></h4>
+                <div class="grid place-content-center">
+                    <p> <span>Save:</span> <input id="save-input" class="mb-4 px-2 bg-[#DCDCDC] rounded" type="text"> % <button id="save-btn" class="mx-auto px-2 bg-[#59A5FF] text-white font-medium rounded">Save</button></p>
+                    <p>Saving Amount: <span id="saving-amount"></span></p>
+                    <p>Remaining Balance: <span id="ramaining-balance"></span></p>
+                </div>
             </div>
         </section>
     </main>
